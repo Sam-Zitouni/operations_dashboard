@@ -6,6 +6,9 @@ import plotly.express as px
 import time
 import streamlit as st
 st.write("DEBUG secrets:", st.secrets)
+st.write("TEST_KEY:", st.secrets.get("TEST_KEY", "not found"))
+st.write("Dialect:", st.secrets["DB_DIALECT"])
+st.write("Host:", st.secrets["DB_HOST"])
 
 
 # ==============================
