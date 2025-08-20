@@ -4,6 +4,8 @@ from sqlalchemy import create_engine
 from datetime import datetime
 import plotly.express as px
 import time
+import streamlit as st
+st.write(st.secrets)
 
 # ==============================
 # CONFIG
@@ -185,3 +187,4 @@ with st.expander("🗓 Approve trip confirmation"):
 st.markdown("---")
 st.caption("Dashboard powered by Streamlit | Last updated: " +
            datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
