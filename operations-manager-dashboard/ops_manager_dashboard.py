@@ -5,7 +5,8 @@ from datetime import datetime
 import plotly.express as px
 import time
 import streamlit as st
-st.write(st.secrets)
+st.write("DEBUG secrets:", st.secrets)
+
 
 # ==============================
 # CONFIG
