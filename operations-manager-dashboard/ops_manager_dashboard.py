@@ -67,7 +67,7 @@ with st.sidebar:
     st.caption(f"Timezone: {TZ}")
 
 if autorefresh_sec:
-    st.experimental_singleton.clear()  # no-op for fresh feel
+    st.cache_data.clear()   # no-op for fresh feel
     st.autorefresh = st.experimental_rerun  # compatibility alias
     st.experimental_set_query_params(ts=int(NOW.timestamp()))
 
@@ -491,3 +491,4 @@ lookup = {"trips":trips, "track":track, "veh_events":veh_events, "smaint":smaint
 for k in preview:
     st.write(f"**{k}** — {len(lookup[k]):,} rows")
     st.dataframe(lookup[k].head(500), use_container_width=True)
+
