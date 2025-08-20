@@ -24,10 +24,12 @@ REFRESH_INTERVAL = 60  # seconds
 if "last_refresh" not in st.session_state:
     st.session_state.last_refresh = time.time()
 
+
 # If 60s have passed, rerun the app
 if time.time() - st.session_state.last_refresh > REFRESH_INTERVAL:
     st.session_state.last_refresh = time.time()
-    st.experimental_rerun()
+    st.rerun()
+
 
 # ==============================
 # DB CONNECTION
